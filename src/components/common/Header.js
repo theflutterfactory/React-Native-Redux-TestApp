@@ -5,7 +5,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-const Header = (props) => (
+export const Header = (props) => (
   <View style={styles.viewStyle}>
     <Text style={styles.textStyle}>{props.headerText}</Text>
   </View>
@@ -28,5 +28,3 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 });
-
-export default Header;

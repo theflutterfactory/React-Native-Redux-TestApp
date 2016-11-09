@@ -5,7 +5,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-const Button = ({ onPress, children }) => (
+export const Button = ({ onPress, children }) => (
   <TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
     <Text style={styles.textStyle}>{children}</Text>
   </TouchableOpacity>
@@ -31,5 +31,3 @@ const styles = StyleSheet.create({
     marginRight: 5
   }
 });
-
-export default Button;

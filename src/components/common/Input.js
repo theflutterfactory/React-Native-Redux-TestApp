@@ -6,7 +6,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-const Input = ({ label, value, onChangeText,
+export const Input = ({ label, value, onChangeText,
   placeholder, secureTextEntry }) => (
     <View style={styles.containerStyle}>
       <Text style={styles.labelStyle}>{label}</Text>
@@ -42,5 +42,4 @@ const Input = ({ label, value, onChangeText,
       alignItems: 'center'
     }
   });
-
-  export default Input;
+  

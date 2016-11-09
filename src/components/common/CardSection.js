@@ -4,7 +4,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-const CardSection = (props) => (
+export const CardSection = (props) => (
   <View style={styles.containerStyle}>{props.children}</View>
 );
 
@@ -19,5 +19,3 @@ const styles = StyleSheet.create({
     position: 'relative'
   }
 });
-
-export default CardSection;
