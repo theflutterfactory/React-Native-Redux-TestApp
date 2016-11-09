@@ -5,9 +5,8 @@ import {
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers/index';
-import {
-  Header
-} from './components/common/Header';
+import { Header } from './components/common/Header';
+import LibraryList from './components/LibraryList';
 
 export default class Main extends Component {
   render() {
@@ -15,6 +14,7 @@ export default class Main extends Component {
       <Provider store={createStore(reducers)}>
         <View>
           <Header headerText="Tech Stack" />
+          <LibraryList />
         </View>
       </Provider>
         );
