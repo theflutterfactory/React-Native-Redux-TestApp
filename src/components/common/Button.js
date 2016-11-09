@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Text,
   TouchableOpacity,
-  StylesSheet
+  StyleSheet
 } from 'react-native';
 
 const Button = ({ onPress, children }) => (
@@ -11,7 +11,7 @@ const Button = ({ onPress, children }) => (
   </TouchableOpacity>
 );
 
-const styles = StylesSheet.create({
+const styles = StyleSheet.create({
   textStyle: {
     alignSelf: 'center',
     color: '#007aff',

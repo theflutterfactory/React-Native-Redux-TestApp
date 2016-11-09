@@ -3,7 +3,7 @@ import {
   TextInput,
   View,
   Text,
-  StylesSheet
+  StyleSheet
 } from 'react-native';
 
 const Input = ({ label, value, onChangeText,
@@ -21,7 +21,7 @@ const Input = ({ label, value, onChangeText,
     </View>
   );
 
-  const styles = StylesSheet.create({
+  const styles = StyleSheet.create({
     inputStyle: {
       color: '#000',
       paddingRight: 5,

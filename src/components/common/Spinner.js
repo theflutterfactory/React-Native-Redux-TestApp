@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View,
   ActivityIndicator,
-  StylesSheet
+  StyleSheet
 } from 'react-native';
 
 const Spinner = ({ size }) => (
@@ -11,7 +11,7 @@ const Spinner = ({ size }) => (
     </View>
   );
 
-  const styles = StylesSheet.create({
+  const styles = StyleSheet.create({
   spinnerStyle: {
     flex: 1,
     justifyContent: 'center',

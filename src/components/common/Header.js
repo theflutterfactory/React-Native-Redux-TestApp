@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Text,
   View,
-  StylesSheet
+  StyleSheet
 } from 'react-native';
 
 const Header = (props) => (
@@ -11,7 +11,7 @@ const Header = (props) => (
   </View>
 );
 
-const styles = StylesSheet.create({
+const styles = StyleSheet.create({
   viewStyle: {
     backgroundColor: '#F8F8F8',
     justifyContent: 'center',

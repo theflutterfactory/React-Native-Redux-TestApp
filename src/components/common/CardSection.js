@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   View,
-  StylesSheet
+  StyleSheet
 } from 'react-native';
 
 const CardSection = (props) => (
   <View style={styles.containerStyle}>{props.children}</View>
 );
 
-const styles = StylesSheet.create({
+const styles = StyleSheet.create({
   containerStyle: {
     borderBottomWidth: 1,
     padding: 5,
