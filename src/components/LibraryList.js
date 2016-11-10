@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
-  ListView,
-  connect,
   View,
-  StyleSheet
-} from 'react-redux';
+  StyleSheet,
+  ListView
+} from 'react-native';
+import ListItem from './ListItem';
 
 class LibraryList extends Component {
   componentWillMount() {
@@ -15,35 +16,21 @@ class LibraryList extends Component {
     this.dataSource = ds.cloneWithRows(this.props.libraries);
   }
 
-  renderRow() {
-
-  }
-
-  renderSeparator(sectionID, rowID) {
-    return (
-      <View style={styles.separator} key={sectionID + rowID} />
-    );
+  renderRow(library) {
+    return <ListItem library={library} />;
   }
 
   render() {
     return (
       <ListView
         dataSource={this.dataSource}
-        renderRow={this.renderRow}
-        renderSeparator={this.renderSeparator} />
+        renderRow={this.renderRow} />
     );
   }
 }
 
-const mapStateToProps = state => {
-  return { libraries: state.libraries };
-};
-
-const styles = StyleSheet.create({
-  separator: {
-    height: 1,
-    backgroundColor: '#90141414'
-  }
-});
+const mapStateToProps = (state) =>
+   ({ libraries: state.libraries })
+;
 
 export default connect(mapStateToProps)(LibraryList);
