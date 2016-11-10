@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   Text,
   StyleSheet
@@ -6,6 +7,7 @@ import {
 import {
   CardSection
 } from './common/CardSection';
+import * as actions from '../actions';
 
 class ListItem extends Component {
   render() {
@@ -24,4 +26,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ListItem;
+export default connect(null, actions)(ListItem);
