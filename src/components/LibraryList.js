@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  View,
-  StyleSheet,
   ListView
 } from 'react-native';
 import ListItem from './ListItem';
