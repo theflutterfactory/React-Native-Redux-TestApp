@@ -4,20 +4,31 @@ import {
   Text,
   StyleSheet,
   View,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  LayoutAnimation,
+  Platform,
+  UIManager
 } from 'react-native';
-import {
-  CardSection
-} from './common/CardSection';
+import { CardSection } from './common/CardSection';
 import * as actions from '../actions';
 
 class ListItem extends Component {
+  componentWillUpdate() {
+    if (Platform.OS === 'android') {
+      UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
+
+    LayoutAnimation.easeInEaseOut();
+  }
+
   renderDescription() {
     const { library, expanded } = this.props;
 
     if (expanded) {
       return (
-        <Text>{library.description}</Text>
+        <CardSection>
+          <Text>{library.description}</Text>
+        </CardSection>
       );
     }
   }
